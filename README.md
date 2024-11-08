@@ -1,4 +1,4 @@
-# Learning how to put things on a website
+# Test
 Using this repository to learn about hosting/updating a website
 
 ## *Overall goals*
