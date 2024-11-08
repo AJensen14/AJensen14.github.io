@@ -33,3 +33,4 @@ This is a list of all the resources used to learn how to make this website
 
 1. [First video I watched on github pages](https://www.youtube.com/watch?v=o5g-lUuFgpg&ab_channel=TonyTeachesTech)
 2. [the markdown code i used to learn how to write markdown properly](https://gist.github.com/allysonsilva/85fff14a22bbdf55485be947566cc09e)
+3. [Jekyll themes](http://jekyllthemes.org/themes/agency/)
