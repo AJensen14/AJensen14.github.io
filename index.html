@@ -45,15 +45,17 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="aboutme.html">About me</a>
-        <a href="projects.html">Projects</a>
-        <a href= "running.html">Running</a>
-        <a href= "actualwork.html">Work</a>
-        <a href = "contact.html">Contact</a>
-    </nav>
+     <!-- Placeholder for header -->
+    <div id="header-placeholder"></div>
+
+    <!-- JavaScript to load the header -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 
     <!-- Main heading -->
     <h1>Welcome to My Personal Website</h1>
