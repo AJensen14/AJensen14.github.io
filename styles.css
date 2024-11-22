@@ -24,7 +24,7 @@ color: #4169E1 ;
 /* sort out the lef panel */
 .left-panel {
     background-color: #EFEFEF;
-    padding: 20px;
+    padding: 0px;
     border-right: 1px solid #EFEFEF;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%; /* Ensures the body takes up the full height of the viewport */
-    overflow: hidden;
+    overflow: auto;
 }
 .left-panel p:last-child {
     margin-top: 0; /* Adds space above the last paragraph */
