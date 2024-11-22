@@ -1,0 +1,195 @@
+/* styles.css */
+/* General body style */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+}
+/* Style for header3 */
+h3 {
+text-align: center;
+color: #4169E1 ;
+}
+/* Splitting up the page into two compartments */
+.main-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    height: 100vh
+}
+/* sort out the lef panel */
+.left-panel {
+    background-color: #EFEFEF;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    align-items: center;
+}
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 50px;
+}
+/* Making sure text stays central */
+.githubtext{
+    text-align: center;
+}
+/* content area */
+.contentmain {
+padding: 20px;
+background-color: #FFFFFF;
+background-image: url("../Images/stockbackground.jpg");
+background-size: 3000px 3000px
+
+}
+.content {
+    padding: 20px;
+    background-color: #FFFFFF;
+    }
+/* entire list of options */
+/* This is for the links on the left i think  */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+}
+/* make a li if needed */
+li {
+    margin: 10px 0;           /* Adds space between items vertically */
+}
+/* options to change the text colour */
+li a {
+    text-decoration: none;    /* Remove underline from links */
+    color: black;             /* Default text color */
+}
+
+li a:hover {
+    color: blue;              /* Change color on hover */
+}
+
+/* trying to remove extra stuff */
+/* This was good to hide things but not sure if its needed now i have fixed other things */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body takes up the full height of the viewport */
+    overflow: auto;
+}
+/* makes the image section of the content page */
+.image-container {
+    display: flex; /* Align images side by side */
+    justify-content: center; /* Center the images horizontally */
+    gap: 40px; /* Add space between the images */
+    margin-top: 20px; /* Add spacing above the image container */
+}
+/* not sure what this does but something with the images */
+.image-container img {
+    border-radius: 10px; /* Optional: Add rounded corners */
+    object-fit: cover; /* Ensure the images fit well within their dimensions */
+}
+/* For the view CV button */
+.view-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #242222;
+    background-color: #d4d4d4;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* for when hovering over view CV button  */
+.view-btn:hover {
+    background-color: #c44242;
+}
+/* Will edit this as to be general for all the projects view buttons if i even go with buttons but leave in for now */
+.remakeplotsview-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #242222;
+    background-color: #d4d4d4;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* hover options */
+.remakeplotsview:hover {
+    background-color: #c44242;
+}
+/* the title box for each individual page */
+.title-box {
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black text */
+    text-align: center; /* Center the text */
+    padding: 20px 40px; /* Spacing inside the box */
+    margin: 0px auto; /* Center the box horizontally */
+    width: fit-content; /* Adjust width to fit content */
+    height: fit-content;
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.5); /* Glowing shadow */
+    font-family: Verdana, Geneva, Tahoma, sans-serif ; /* Set a readable font */
+    margin-left: 50px;
+    margin-top: 75px;
+}
+/* mnore title box customisation */
+.title-box h1 {
+    margin: 0; /* Remove default margin around <h1> */
+    font-size: 50px; /* Adjust font size as needed */
+}
+/* Again just splitting up main pages */
+.containermainpages{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/*  Text segment */
+.textmain{
+    flex: 1;
+    padding-right: 20px;
+}
+/* Image segment */
+.imagemain{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: -50px;
+}
+/* Centering the first image */
+.centered-image {
+    display: block;  /* Makes it a block-level element */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Moving the second image down */
+.move-down {
+    margin-top: 50px; /* Adjust the number to move the image down */
+}
+/* editing figure captions */
+figcaption {
+    font-size: 18px;  /* Adjust font size */
+    color: #555;  /* Dark gray color */
+    margin-top: 10px;  /* Space between image and caption */
+    text-align: center;
+}
