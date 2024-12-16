@@ -37,6 +37,7 @@ color: #4169E1 ;
     border-radius: 50%;
     object-fit: cover;
     margin-top: 50px;
+    border: 5px solid black;
 }
 /* Making sure text stays central */
 .githubtext{
@@ -93,7 +94,7 @@ html, body {
     display: flex; /* Align images side by side */
     justify-content: center; /* Center the images horizontally */
     gap: 40px; /* Add space between the images */
-    margin-top: 20px; /* Add spacing above the image container */
+    margin-top: 50px; /* Add spacing above the image container */
 }
 /* not sure what this does but something with the images */
 .image-container img {
@@ -151,6 +152,26 @@ html, body {
     margin-left: 50px;
     margin-top: 75px;
 }
+/* make a title box for the center of the page */
+.title-box-center {
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black text */
+    text-align: center; /* Center the text */
+    padding: 20px 40px; /* Spacing inside the box */
+    margin: 0px auto; /* Center the box horizontally */
+    width: fit-content; /* Adjust width to fit content */
+    height: fit-content;
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.5); /* Glowing shadow */
+    font-family: Verdana, Geneva, Tahoma, sans-serif ; /* Set a readable font */
+}
+
+.title-box-center h1 {
+    margin: 0;
+    font-size: 50px;
+}
+
+
 /* mnore title box customisation */
 .title-box h1 {
     margin: 0; /* Remove default margin around <h1> */
@@ -193,3 +214,209 @@ figcaption {
     margin-top: 10px;  /* Space between image and caption */
     text-align: center;
 }
+/* Style the list */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: left;
+}
+
+/* Style each list item */
+.menu li {
+    margin: 10px 0;
+}
+
+/* Style links */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Hover effect for links */
+.menu-item:hover .menu-text {
+    color: #007BFF; /* Change text color on hover */
+}
+
+/* Style the text */
+.menu-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px; /* Add spacing between text and icon */
+    font-size: 20px;
+}
+
+/* Style the icon */
+.menu-icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect for icons */
+.menu-item:hover .menu-icon img {
+    transform: scale(1.6); /* Slightly enlarge icon on hover */
+}
+
+/* Styling the clickable buttons */
+button {
+    background-color: #2E8B57; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding */
+    font-size: 30px; /* Adjust font size */
+    cursor: pointer; /* Show pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+
+/* changing the size of button once clicked */
+button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* changing the spacing around clickable buttons */
+button + button {
+    margin-left: 70px; /* Add spacing between buttons */
+}
+
+/* Moving the position of the buttons  */
+.button-container {
+   margin-bottom: 20px; 
+   text-align: center;
+}
+
+/* Default button styling */
+.button-container button {
+    padding: 10px 20px;
+    background-color: #5db370; /* Default blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.button-container button:hover {
+    background-color: #5db370; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge */
+}
+
+/* Active button styling */
+.button-container button:focus {
+    background-color: #15573b; /* Green color when clicked */
+    transform: scale(1.2); /* Larger size */
+    outline: none; /* Remove default focus outline */
+    color: white; /* Ensure text color contrasts with background */
+}
+
+.content-box {
+    display: none;
+    margin-top: 50px;
+    padding: 20px;
+    
+    border-radius: 5px;
+    text-align: center;
+}
+
+.active {
+    display: block;
+}
+
+.subheading-center {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ; /* Set a readable font */
+}
+
+/* Makes the image section of the content page */
+.image-container-workbooks {
+    display: flex; /* Align images side by side */
+    justify-content: center; /* Center the images horizontally */
+    gap: 150px; /* Add space between the images */
+    margin: 30px; /* Add spacing above the image container */
+    align-items: center; /* Align items vertically */
+    text-align: center; /* Center content (figcaption) horizontally */
+}
+
+/* Add in the figure of the workbook */
+.image-container-workbooks figure {
+    display: flex;
+    flex-direction: column; /* Stack image and caption vertically */
+    align-items: center; /* Center align image and caption */
+    margin: 0; /* Remove default margin */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and box-shadow */
+}
+
+/* Center images inside their figure */
+.image-container-workbooks img {
+    border-radius: 30px; /* Optional: Add rounded corners */
+    object-fit: cover; /* Ensure the images fit well within their dimensions */
+    max-width: 80%; /* Prevent images from overflowing */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the figure captions */
+.image-container-workbooks figcaption {
+    margin-top: 15px; /* Add space between image and caption */
+    font-size: 24px; /* Adjust the font size */
+    color: #000000; /* Optional: Set a color for the caption */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.2; /* Adjust line height */
+}
+
+.image-container-workbooks figure:hover {
+    transform: scale(1.1); /* Slightly enlarge the figure */
+    border-radius: 30px; /* Ensure the box matches the image's rounded corners */
+    padding: 0px; /* Optional: Add padding for a nicer effect */
+}
+
+/* Remove underline and inherit text styles for links */
+.image-container-workbooks a {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Ensure the text color matches its parent */
+}
+.table-container {
+    max-height: 700px; /* Set the height you want for the scrollable table */
+    overflow-y: auto; /* Add vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border around the table */
+    border-radius: 5px; /* Optional: Rounded corners */
+    padding: 5px; /* Optional: Add padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    width: 50%;
+  }
+
+  table {
+    width: 100%; /* Make the table take up the full width of the container */
+    border-collapse: collapse; /* Remove spacing between table cells */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Custom font */
+  }
+
+  th, td {
+    border: 1px solid #ddd; /* Add borders to the table cells */
+    padding: 10px; /* Increase padding for better readability */
+    text-align: left; /* Align text to the left */
+  }
+
+  th {
+    background-color:  #15573b; /* Green background for headers */
+    color: white; /* White text for contrast */
+    text-transform: uppercase; /* Optional: Uppercase headers */
+    font-weight: bold; /* Make header text bold */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+  }
+
+  tr:hover {
+    background-color: #f1f1f1; /* Slight highlight on hover */
+  }

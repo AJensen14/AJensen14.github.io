@@ -16,30 +16,160 @@
                  <!-- Adding text with my name -->
                  <h3 style="color: black; font-size: 30px;">Anders Jensen</h3>
                  <!-- Adding that i work at liverpool with link --> 
-                 <p style="color: black; font-size: 20px; margin-top: -20px;">PhD Student at the <br>
-                    <a href="https://www.liverpool.ac.uk" style="color: blue; text-decoration: none;">University of Liverpool</a>
+                 <p style="color: black; font-size: 20px; margin-top: -20px;" class="githubtext">PhD Student at the <br>
+                    <a href="https://www.liverpool.ac.uk" style="color: rgb(121, 121, 228); text-decoration: none;">University of Liverpool</a>
                 </p>
                 <!-- Making the links to all the other pages -->
                 <ul>
-                    <li><a href="../Pages/index.html">Home</a></li>
-                    <li><a href="../Pages/aboutme.html">About Me</a></li>
-                    <li><a href="../Pages/projects.html">Projects</a></li>
-                    <li><a href="../Pages/work.html">Work</a></li>
-                    <li><a href="../Pages/running.html">Running</a></li>
-                    <li><a href="../Pages/contact.html">Contact Me</a></li>
+                    <li>
+                        <a href="../index.html" class="menu-item">
+                            <span class="menu-text">Home</span>
+                            <span class="menu-icon">
+                                <img src="../Images/home.png" alt="Home Icon" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="aboutme.html" class="menu-item">
+                            <span class="menu-text">About Me</span>
+                            <span class="menu-icon">
+                                <img src="../Images/aboutme.png" alt="About Me Icon" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html" class="menu-item">
+                            <span class="menu-text">Projects</span>
+                            <span class="menu-icon">
+                                <img src="../Images/projects.png" alt="Project Icon" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="work.html" class="menu-item">
+                            <span class="menu-text">Work</span>
+                            <span class="menu-icon">
+                                <img src="../Images/work.png" alt="work Icon" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="running.html" class="menu-item">
+                            <span class="menu-text">Running</span>
+                            <span class="menu-icon">
+                                <img src="../Images/running.png" alt="running Icon" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="menu-item">
+                            <span class="menu-text">Contact</span>
+                            <span class="menu-icon">
+                                <img src="../Images/contact.png" alt="contact Icon" />
+                            </span>
+                        </a>
+                    </li>
                 </ul>
                 <!-- Adding more text about github code (githubtext) -->
                 <p style="color: #A0A0A0;font-size: 16px; font-family: Verdana, Geneva, Tahoma, sans-serif;" class="githubtext">
-                All source code is available on my <a href="https://github.com/AJensen14" style="color: blue; text-decoration: none;">github page</a> 
+                All source code is available on my <a href="https://github.com/AJensen14" style="color: rgb(121, 121, 228); text-decoration: none;">github page</a> 
                 along with other projects.
                 </p>
                 <!-- Adding red lion and UOL logos -->
                 <div class="image-container">
-                    <img src="../Images/redlion.png" alt="redlion1" height="170px" width = auto>
-                    <img src="../Images/liverpool logo.png" alt="liverpoollogo" height="170px" width = auto>
+                    <img src="../Images/redlion.png" alt="redlion1" height="150px" width = auto>
+                    <img src="../Images/liverpool logo.png" alt="liverpoollogo" height="150px" width = auto>
                 </div>
             </div>
             <!-- Now need to move on to actual content of page -->
-
+             <div class="content">
+                <div class="title-box-center">
+                    <h1>My Projects</h1>
+                </div>
+                <!-- Name of headings of button -->
+                <div class="subheading-center">
+                    <h1 style="font-size: 36px;">Select Content</h1>
+                </div>
+                <div class="button-container">
+                    <button onclick="showContent('workbooks')">R Workbooks</button>
+                    <button onclick="showContent('markdowns')">R Markdowns</button>
+                    <button onclick="showContent('analysis')">Data Analysis</button>
+                </div>
+                <div id="workbooks" class="content-box">
+                    <div class="image-container-workbooks">
+                        <a href="../PDF files/Intro_to_RStudio_2024.pdf" target="_blank">
+                            <figure>
+                                <img src="../Images/rstudio logo remade.png" alt="RStudio logo" width="300px">
+                                <figcaption>Introduction to RStudio</figcaption>
+                            </figure>
+                        </a>
+                        <a href="../PDF files/GGPLOT2_book_November_2024.pdf" target="_blank">
+                            <figure>
+                                <img src="../Images/ggplot logo remade (2).png" alt="GGplot2 logo" width="300px">
+                                <figcaption>Introduction to GGplot2</figcaption>
+                            </figure>
+                        </a>
+                        <a href="../PDF files/Statistics in RStudio.pdf" target="_blank">
+                            <figure>
+                                <img src="../Images/stats logo remade.png" alt="Statistics logo" width="300px">
+                                <figcaption>Statistics in RStudio</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <!-- markdown section needs a table and then some random plots on the right hand side of the page -->
+                <div id="markdowns" class="content-box">
+                    <div class="table-container">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Title</th>
+                              <th>Notes</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- Repeat rows for demonstration -->
+                            <tr>
+                              <td>6/11/24</td>
+                              <td>
+                                <a href="../R Projects/Final-task.html">Recreating plots</a>
+                              </td>
+                              <td>A HTML file of how to recreate plots using GGplot2</td>
+                            </tr>
+                            <tr>
+                              <td>20/12/23</td>
+                              <td>
+                                <a href="../R Projects/Schedule.html">TS Schedule</a>
+                              </td>
+                              <td>Interactive map of where Taylor Swift is performing made using Rstudio</td>
+                            </tr>
+                            <tr>
+                              <td>3/7/24</td>
+                              <td>
+                                
+                              </td>
+                              <td>35</td>
+                            </tr>
+                            <!-- Add as many rows as needed -->
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+                <div id="analysis" class="content-box">
+                    <p>This is the content for Button 3.</p>
+                </div>
+                <script>
+                    function showContent(id) {
+                        // Hide all content boxes
+                        const contentBoxes = document.querySelectorAll('.content-box');
+                        contentBoxes.forEach(box => box.classList.remove('active'));
+                        
+                        // Show the selected content box
+                        document.getElementById(id).classList.add('active');
+                    }
+                </script>
+             </div>
+        </div>  
     </body>
 </html>
