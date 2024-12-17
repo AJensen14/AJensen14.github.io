@@ -31,13 +31,37 @@ color: #4169E1 ;
     align-items: center;
 }
 /* Profile Photo */
-.profile-photo {
+.image-containerlogo {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 50px;
+    border-radius: 50%; /* Makes it circular */
     border: 5px solid black;
+    overflow: hidden;
+    margin-top: 50px;
+    position: relative; /* For positioning the hover image */
+}
+
+/* Default image style */
+.hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+}
+
+/* On hover, hide the first image and show the hover effect */
+.image-containerlogo:hover .hover-image {
+    opacity: 0; /* Makes the first image fade out */
+}
+
+/* Add the second image as a background */
+.image-containerlogo {
+    background-image: url('../Images/sillypicofme.png'); /* The hover image */
+    background-size: cover;
+    background-position: center;
 }
 /* Making sure text stays central */
 .githubtext{
