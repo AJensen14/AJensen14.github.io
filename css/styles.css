@@ -1,0 +1,476 @@
+
+/* Standard setting to reset hidden gaps */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* makes standard text black and background colour */
+/* everything inside body gets this unless specified */
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  color: #000000;
+  background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0px;
+}
+
+/* links are made to be blue */
+a {
+  text-decoration: none;
+  color: #4970e0;
+}
+
+/* main page  */
+.main-container { 
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh; 
+} 
+
+/* Sidebar */
+.sidebar {
+  background-color: #f1f1f1;
+  padding: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  font-size: 13px; 
+   
+  overflow: hidden; 
+  top: 0; 
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  text-align: center;     
+  margin-bottom: 10px;    
+  font-size: 18px;
+}
+
+.profile-photo {
+  width: 140px;      
+  height: 140px;     
+  border-radius: 50%; 
+  object-fit: cover;  
+  margin-bottom: 15px; 
+  border: 3px solid black;
+}
+
+/* Mobile-first: nav menu horizontal */
+.nav-menu ul {
+  display: flex;           
+  justify-content: center; 
+  padding: 0;
+  margin-top: 20px;
+  flex-wrap: wrap;         
+}
+
+/* listed items */
+.nav-menu li {
+  display: flex;           
+  align-items: center;     
+  margin: 0px 2px;          
+}
+
+/* Make the <a> inside li a flex container */
+.nav-menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: transform 0.2s ease, color 0.2s ease; 
+}
+
+/* Hover effect: scale up both text and icon */
+.nav-menu li a:hover {
+  transform: scale(1.1); 
+  color: #007BFF;        
+}
+
+/* navigation icons */
+/* might end up hiding these on a phone */
+/* or putting them above the list */
+.nav-menu img {
+  width: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+  margin-bottom: 0px;
+}
+
+/* specifically the github text */
+.github-text {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  flex-direction: column; 
+  align-items: center;    
+  text-align: center;     
+  font-size: 15px;
+}
+
+/* sorts out the backgound */
+.content {
+  padding: 20px;
+  text-align: center;
+  color: rgb(255, 255, 255); 
+  background-image: url(../images/stockbackground.jpg); 
+  background-size: 230%;       
+  background-repeat: no-repeat; 
+  background-position: left top;  
+  min-height: 60vh;
+  background-attachment: fixed;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.content_page {
+    max-width: 1800px; /* optional, keeps text readable */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url(../images/stockbackground.jpg); 
+    background-size: 230%;       
+    line-height: 1.6;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: #f1f1f1;
+    background-attachment: fixed;
+}
+
+.content_page h1 {
+  margin-top: 40px; 
+  margin-bottom: 20px; 
+  font-size: 38px;
+} 
+
+.content_page h2 {
+    margin-top: 40px; 
+    margin-bottom: 20px; 
+    font-size: 28px;
+}
+
+.content_page p {
+    margin-bottom: 30px; 
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.content_page .highlight-link {
+    color: #ff6b6b;      
+    font-weight: bold;   
+    transition: color 0.3s ease;
+}
+
+.content_page .highlight-link:hover {
+    color: #ff3b3b;      
+}
+
+
+/* cv button */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ffffff; 
+  color: #000000;          
+  border-radius: 5px;
+  border: 2px solid #000000; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* cv button hovering */
+.btn:hover {
+  background-color: #f10000; 
+  color: #ffffff;            
+}
+
+/* Sidebar images container */
+.sidebar-images {
+  display: none; 
+  gap: 40px;     
+  margin-top: auto; 
+  justify-content: center;
+}
+
+/* these are all the same as above  */
+/* only needed for when on a pc */
+@media (min-width: 1000px) {
+   .main-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    font-size: 20px;
+  }
+
+  .sidebar {
+    width: 600px;
+    height: 100dvh;
+    min-height: 100dvh;
+    position: fixed;      /* locks sidebar in place */
+    left: 0;
+    top: 0;
+    overflow-y: auto;   
+    overflow-x: hidden;  
+    font-size: 20px;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    align-content: flex-start;
+    outline: 10px darkred;
+  }
+
+
+  .content,
+  .content_page {
+    margin-left: 600px;   /* pushes content right of sidebar */
+    flex: 1;
+    padding: 50px;
+    min-height: 100vh;
+    overflow-y: auto;     /* ONLY content scrolls */
+  }
+
+ .nav-menu ul {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .nav-menu li {
+    margin: 15px 0;          
+  }
+
+
+
+ .sidebar-images {
+    display: flex;         
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    margin-top: 40px;
+  }
+
+  .sidebar-images img {
+    height: 200px; /* forces cropping */
+    object-fit: cover;
+}
+
+  .sidebar-spacer{
+    flex-grow: 1;
+  }
+
+
+}
+
+/* container for projects accordion */
+.accordion {
+  margin-top: 30px;
+  max-width: 900px;
+}
+
+/* hide checkbox controls */
+.accordion input {
+  display: none;
+}
+
+/* category labels (R Workbooks, Shiny Apps, etc) */
+.accordion label {
+  display: block;
+  padding: 15px 20px;
+  margin-top: 12px;
+  background-color: rgba(255,255,255,0.9);
+  color: #000;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* hover effect */
+.accordion label:hover {
+  background-color: rgba(255,255,255,1);
+  transform: translateX(5px);
+}
+
+/* hidden content area */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+/* show content when clicked */
+.accordion input:checked + label + .accordion-content {
+  max-height: 1000px;
+  margin-top: 10px;
+}
+
+
+/* individual project cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #dddddd;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* White content box for About page */
+.content-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+  padding: 40px 50px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.project-buttons button,
+.button-link {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #e04949;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.project-buttons button:hover,
+.project-buttons .button-link:hover {
+    background-color: #e04949;
+}
+
+.project-buttons .button-link:link,
+.project-buttons .button-link:visited,
+.project-buttons .button-link:hover,
+.project-buttons .button-link:active {
+  color: white;
+  background-color: #e04949;
+}
+
+.tutorial-container {
+    display: none;
+    margin-top: 15px;
+}
+
+/* Career Section Container */
+.career-section {
+  padding: 40px 60px;
+  color: #ffffff;
+}
+
+/* Section Title */
+.career-section h1 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* Hidden radio buttons */
+.career-toggle {
+  display: none;
+}
+
+/* Headings */
+.career-heading {
+  display: block;
+  padding: 18px 22px;
+  margin-bottom: 10px;
+  background-color: rgba(50, 44, 44, 0.5);
+  color: #f2eded;
+  font-size: 26px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.career-heading:hover {
+  background-color: rgba(237, 103, 103, 0.8);
+}
+
+/* Content (hidden by default) */
+.career-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(0,0,0,1);
+  padding: 0 22px;
+  border-left: 5px solid #e04949;
+  border-radius: 0 0 8px 8px;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  scrollbar-width: none;
+}
+
+/* Expand when selected */
+.career-toggle:checked + .career-heading + .career-content {
+  max-height: 800px;
+  padding: 22px;
+  overflow-y: auto;
+}
+
+/* Text styling inside */
+.career-content p {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.career-content h3 {
+  color: #ffdede;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
