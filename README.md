@@ -10,10 +10,10 @@ Using this repository to learn about hosting/updating a website
    2. HTML
    3. R code txt files
 3. Include second sub-repository that i can link things to
-4. Add a password onto the website to be viewed
-5. Contact page
+
+4. Contact page
    1. LinkedIN
-   2. Knowhow
+ 
 6. Then edit those pages to make this website visible on them
 
 ## *Design*
@@ -22,8 +22,8 @@ Ideally want an about me page to begin with then with links to other stuff
 - [] About me
 - [] Data analysis portfolio
 - [] Links to publications
-- [] Useful videos
 - [] Running pbs
+- [] Contact
 
 In order to make this i need to first find a design and begin learning how to edit panels at the top 
 I can do this in shiny apps but not sure how to do this 
