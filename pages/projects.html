@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<script>
+function toggleTutorial(id, btn) {
+    const el = document.getElementById(id);
+
+    if (el.style.display === "block") {
+        el.style.display = "none";
+        btn.textContent = "View Project";
+    } else {
+        el.style.display = "block";
+        btn.textContent = "Hide Project";
+    }
+}
+</script>
+
+<body>
+
+<div class="main-container">
+
+    <!-- Sidebar (UNCHANGED) -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="../images/AndersJensenMusculoskeletalPHD.jpg" alt="Anders Jensen" class="profile-photo">
+            <h3>Dr Anders Jensen</h3>
+            <p>Post-doctoral researcher at the 
+                <a href="https://www.liverpool.ac.uk">University of Liverpool</a>
+            </p>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../index.html"><img src="../images/home.png"> Home</a></li>
+                <li><a href="../pages/aboutme.html"><img src="../images/aboutme.png"> About Me</a></li>
+                <li><a href="../pages/projects.html"><img src="../images/projects.png"> Projects</a></li>
+                <li><a href="../pages/work.html"><img src="../images/work.png"> Work</a></li>
+                <li><a href="../pages/running.html"><img src="../images/running.png"> Running</a></li>
+                <li><a href="../pages/contact.html"><img src="../images/contact.png"> Contact</a></li>
+            </ul>
+        </nav>
+
+        <p class="github-text">
+            All source code on my 
+            <a href="https://github.com/AJensen14">GitHub</a> page along with other projects.
+        </p>
+
+        <div class="sidebar-images">
+            <img src="../images/redlion.png">
+            <img src="../images/liverpool logo.png">
+        </div>
+
+    </aside>
+
+
+    <!-- NEW MAIN CONTENT AREA -->
+    <main class="content">
+    <section class="career-section">
+
+        <h1>Projects</h1>
+
+        <!-- R WORKBOOKS -->
+        <input type="checkbox" id="rworkbooks" class="career-toggle">
+        <label for="rworkbooks" class="career-heading">R Workbooks</label>
+
+        <div class="career-content">
+            <div class="project-card">
+                <h3>Introduction to R</h3>
+                <p>A beginners guide to using RStudio.</p>
+                <a href="../pdf/Intro_To_R.pdf" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Data visualisation using ggplot2</h3>
+                <p>An introduction of using the ggplot2 package for data visualisation.</p>
+                <a href="../pdf/ggplot2.pdf" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Statistics in RStudio</h3>
+                <p>An introduction to statistical testing using RStudio.</p>
+                <a href="../pdf/stats.pdf" target="_blank">View Project →</a>
+            </div>
+        </div>
+
+        <!-- SHINY APPS -->
+        <input type="checkbox" id="shiny" class="career-toggle">
+        <label for="shiny" class="career-heading">Shiny Applications</label>
+
+        <div class="career-content">
+            <div class="project-card">
+                <h3>Enzyme Kinetics</h3>
+                <p>Simple Shiny app for analysing/visualising Michaelis-Menten kinetics</p>
+                <a href="https://andersjensen14.shinyapps.io/andy_shiny_app/" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Proteomics Comparison</h3>
+                <p>A simple tool to cross compare proteomics results</p>
+                <a href="https://andersjensen14.shinyapps.io/shiny_app_for_checking/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>The Equine Protein Atlas</h3>
+                <p>The current status of my Post-Doctoral project (work is ongoing)</p>
+                <a href="#" target="_blank">View Project</a>
+            </div>
+        </div>
+
+        <!-- TUTORIALS -->
+        <input type="checkbox" id="tutorials" class="career-toggle">
+        <label for="tutorials" class="career-heading">R Tutorials</label>
+
+        <div class="career-content">
+
+            <div class="project-card">
+                <h3>Remaking plots with ggplot2</h3>
+                <p>An extension of the ggplot2 workbook</p>
+
+                <div class="project-buttons">
+                    <button onclick="toggleTutorial('tutorial1', this)">View Project</button>
+                    <a href="../markdowns/Final-task.html" target="_blank" class="button-link">Open in New Tab</a>
+                </div>
+
+                <div id="tutorial1" class="tutorial-container">
+                    <iframe src="../markdowns/Final-task.html" width="100%" height="600"></iframe>
+                </div>
+            </div>
+
+            <div class="project-card"> 
+                <h3>Using the AndersR package</h3> 
+                <p>A guide on how to install and use the AndersR package</p> 
+                <div class="project-buttons"> 
+                    <button onclick="toggleTutorial('tutorial2', this)">View Project</button> 
+                    <a href="../markdowns/andersr.html" target="_blank" class="button-link">Open in New Tab</a> 
+                </div> 
+                <div id="tutorial2" class="tutorial-container"> 
+                    <iframe src="../markdowns/andersr.html" width="100%" height="600" loading="lazy"> </iframe> 
+                </div> 
+            </div> 
+            <div class="project-card"> 
+                <h3>Animating plots</h3> 
+                <p>A guide on how to animate your ggplots</p> 
+                <div class="project-buttons"> 
+                    <button onclick="toggleTutorial('tutorial3', this)">View Project</button> 
+                    <a href="../markdowns/Animation.html" target="_blank" class="button-link">Open in New Tab</a> 
+                </div> 
+                <div id="tutorial3" class="tutorial-container"> 
+                    <iframe src="../markdowns/Animation.html" width="100%" height="600" loading="lazy"> </iframe> 
+                </div> 
+            </div> 
+            <div class="project-card"> 
+                <h3>Protein Assays</h3> 
+                <p>A guide on protein assay analysis</p> 
+                <div class="project-buttons"> 
+                    <button onclick="toggleTutorial('tutorial4', this)">View Project</button> 
+                    <a href="../markdowns/comparing_protein_assays.html" target="_blank" class="button-link">Open in New Tab</a> 
+                </div> 
+                <div id="tutorial4" class="tutorial-container"> 
+                    <iframe src="../markdowns/comparing_protein_assays.html" width="100%" height="600" loading="lazy"> </iframe> 
+                </div> 
+            </div>
+        </div>
+        <input type="checkbox" id="Presentations" class="career-toggle">
+        <label for="Presentations" class="career-heading">Presentations</label>
+
+    </section>
+</main>
+
+
+</div>
+
+</body>
+</html>
