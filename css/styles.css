@@ -125,11 +125,11 @@ a {
   text-align: center;
   color: rgb(255, 255, 255); 
   background-image: url(../images/stockbackground.jpg); 
-  background-size: 230%;       
+  background-size: cover;       
   background-repeat: no-repeat; 
   background-position: left top;  
   min-height: 60vh;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .content h1 {
@@ -142,13 +142,13 @@ a {
     padding: 20px;
     font-family: Arial, sans-serif;
     background-image: url(../images/stockbackground.jpg); 
-    background-size: 230%;       
+    background-size: cover;       
     line-height: 1.6;
     text-align: left;
     display: flex;
     flex-direction: column;
     color: #f1f1f1;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 .content_page h1 {
